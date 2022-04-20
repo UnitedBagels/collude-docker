@@ -1,0 +1,76 @@
+#slider {
+  z-index: 40;
+}
+
+#slider {
+  height: 100%;
+}
+.slideIn {
+  box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: fixed;
+  width: 20%;
+  min-width: 300px;
+  left: min(-20%, -300px);
+  background-color: white;
+
+  /* left: -300px; */
+  /* Animation  */
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  text-align: center;
+}
+
+.slideOut {
+  box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: fixed;
+  width: 20%;
+  min-width: 300px;
+  max-width: 450px;
+  left: 0px;
+  background-color: white;
+  /* Animation  */
+  transition-property: all;
+  transition-duration: 1.6s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  text-align: center;
+
+}
+
+.slideOutTab {
+  /* margin-top: auto; */
+  top: 25%;
+  position: absolute;
+  /* right: -39px; */
+  left: 100%;
+  height: 200px;
+  width: 40px;
+  -webkit-box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  clip-path: inset(-50px -50px -50px 0px);
+  background: white;
+  border-radius: 0px 15px 15px 0px;
+  border-left-color: rgba(255, 255, 255, 1);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.slideButton {
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  font-size: 20px;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

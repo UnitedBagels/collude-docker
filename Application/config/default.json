@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://group3:softwaredevelopment@collude.kmqne.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret": "randomSecretToken"
+}

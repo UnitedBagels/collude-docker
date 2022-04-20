@@ -1,0 +1,593 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+#root {
+	height: 100%;
+}
+
+.container {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	padding-top: 55px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+	background-color: #f2f2f2;
+}
+
+ul {
+	list-style: none;
+}
+
+.containerBox {
+	/* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); */
+	box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+
+	/* padding-bottom: 0 !important; */
+	/* margin-bottom: 0 !important; */
+	/* display: inline-flex; */
+	margin: 20px;
+	padding: 5px;
+	padding-bottom: 0;
+	/* width: 50vw; */
+	background-color: white;
+	border-radius: 7%;
+	max-width: 340px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.addAvailBox {
+	box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+	margin: 20px;
+	padding: 20px;
+	background-color: white;
+	border-radius: 25px;
+	text-align: center;
+	max-width: 340px;
+	height: 360px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.addAvail {
+	/* display: inline-flex; */
+	margin-top: 20px;
+	float: bottom;
+}
+
+.MuiPickerStaticWrapper-root {
+	background-color: white !important;
+	/* margin: 10px; */
+	display: inline-block !important;
+	border-radius: 7%;
+}
+
+.MuiCalendarPicker-root {
+	background-color: white !important;
+	padding: 10px !important;
+	max-height: auto;
+}
+
+.PrivatePickersSlideTransition-root {
+	min-height: 230px !important;
+}
+
+.page {
+	min-height: 100%;
+	margin-left: max(20%, 300px);
+	width: var(vw - max(20%, 300px));
+	padding: 1em;
+	padding-left: 70px;
+	padding-top: 60px;
+	min-width: 850px;
+	
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	
+}
+  
+  .pageExpand {
+	width: 100%;
+	min-height: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 1rem;
+	padding-left: 70px;
+	padding-top: 60px;
+	
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  }
+
+.header {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+h1 {
+	/* color: #01303f; */
+	color: #6a6a6a;
+	font-size: 55px;
+}
+
+h2 {
+	/* color: #01303f; */
+	color: #6a6a6a;
+	font-size: 35px;
+}
+
+h3 {
+	color: #01303f;
+	font-size: 20px;
+}
+
+p {
+	color: #6a6a6a;
+	font-size: 18px;
+}
+
+.dashLeft {
+	width: 70%;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	justify-content: center;
+	padding-right: 25px;
+}
+
+.dashRight {
+	width: 30%;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.meetings {
+	min-width: 500px;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.availability {
+	min-width: 320px;
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.singleMeeting {
+	box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+	/* padding-bottom: 0 !important; */
+	/* margin-bottom: 0 !important; */
+	/* display: inline-flex; */
+	margin: 20px;
+	padding: 25px;
+	/* width: 50vw; */
+	background-color: white;
+	border-radius: 20px;
+	/* max-width: 1000px; */
+	min-width: 100px;
+	max-height: 170px;
+	margin-left: auto;
+	margin-right: auto;
+	letter-spacing: 2px;
+}
+
+.meetingFooter {
+	display: inline-flex;
+	padding: auto;
+	width: 100%;
+}
+
+.fa-cog {
+	color: #01303f;
+	font-size: 25px;
+	margin-right: 10px;
+}
+
+.startBttn {
+	background-color: #01303f;
+	color: white;
+	border-radius: 15px;
+	padding: 2px;
+	font-size: 18px;
+	float: right;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 100px;
+}
+
+.startBttnDis {
+	background-color: #01303f;
+	color: white;
+	border-radius: 15px;
+	padding: 2px;
+	font-size: 18px;
+	float: right;
+	margin-left: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 100px;
+	opacity: 0.5;
+}
+
+.conversBar {
+	/* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); */
+	box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+
+	display: flex;
+	padding: 10px;
+	width: 90%;
+	border: solid 3px #01303f;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.contactName {
+	color: #01303f;
+	font-size: 22px;
+	font-weight: 700;
+	margin-right: 10px;
+}
+
+.lastOnline {
+	color: #6a6a6a;
+	font-size: 18px;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.dot {
+	height: 20px;
+	width: 20px;
+	background-color: green;
+	border-radius: 50%;
+	margin-right: 15px;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: inline-block;
+}
+
+.search {
+	/* box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); */
+	box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2);
+
+	display: flex;
+	padding: 10px;
+	width: 90%;
+	border: solid 5px #47c2ff;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	font-size: 20px;
+	margin-top: 100px;
+	margin-bottom: 65px;
+}
+
+.centeredHor {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.chatItem{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.chatContainer {
+	width: 100%;
+	height: 75vh;
+	/* display: flex; */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.messages {
+	width: 100%;
+	height: 90%;
+}
+
+.chatName {
+	color: #01303f;
+	font-weight: 750;
+	text-align: center;
+}
+.sepLine {
+	width: 90%;
+	height: 2px;
+	background-color: #01303f;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.3;
+}
+
+.chatInputContainer {
+	width: 100%;
+}
+
+.chatInput {
+	width: 100%;
+	height: 55px;
+	border: solid 2px #01303f;
+	font-size: 16px;
+	font-weight: 600;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+	padding-top: 20px !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+/* CSS for modal form */
+.formContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 800px;
+	/* height: 400px; */
+	background-color: white;
+	box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+	padding: 25px;
+}
+
+.meetingRequest {
+	min-width: 500px;
+	max-width: 650px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 35px;
+	padding: 15px;
+	padding-left: 25px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: white;
+	box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+.meetingContent {
+	display: inline-block;
+	width: 75%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.meetingControls {
+	display: inline-block;
+	width: 25%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.buttonContainer {
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 35px;
+	text-align: center;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	border-color: #01303f;
+	border-style: solid;
+	border-width: 4px;
+	background-color: white;
+}
+
+.buttonContainer:hover {
+	background-color: #01303f;
+	color: white;
+}
+
+.buttonContainer:active {
+	width: 63px;
+	height: 63px;
+}
+
+.declineButton {
+	color: #e05b54;
+}
+
+.acceptButton {
+	color: #7ec071;
+}
+
+.selectedBad, .selectedBad:hover {
+	background-color: #01303f;
+	color: #e05b54;
+	margin-left: 75px;
+}
+
+.selectedGood, .selectedGood:hover {
+	background-color: #01303f;
+	color: #7ec071;
+	margin-left: 75px;
+}
+
+.dateRangeContainer {
+	width: 100%;
+	height: 75px;
+}
+.fromTimeBox {
+	width: 48%;
+	height: 75px;
+	display: flex;
+	float: left;
+}
+
+.toTimeBox {
+	width: 48%;
+	height: 75px;
+	display: flex;
+	float: right;
+}
+
+.repeatContainer {
+	width: 100%;
+	height: 40px;
+}
+
+.timeSubmit {
+	display: inline-block;
+	width: 48%;
+	height: 80%;
+	border-radius: 15px;
+	background-color: #01303f;
+	color: white;
+	font-size: 20px;
+	vertical-align: top;
+}
+.container {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	width: 50%;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 32px;
+	width: 32px;
+	background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+	background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+	background-color: #01303f;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+	display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+	left: 4px;
+	top: -5px;
+	width: 16px;
+	height: 24px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+
+  .availBox {
+	  width: 100%;
+	  height: 100%;
+  }
+
+  .white {
+	  color: white;
+  }
+
+  .availHeader {
+	  width: 100%;
+	  height: 17%;
+	  background-color: #01303f;
+	  font-size: 20px;
+	  font-weight: 600;
+	  padding-bottom: 10px;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	  border-radius: 20px;
+  }
+
+  .timeRanges {
+	  width: 100%;
+	  height: 50%;
+	  padding-top: 3px;
+	  padding-bottom: 3px;
+	  margin-bottom: 5px;
+	  border-bottom: 2px solid #01303f;
+	  overflow-y: scroll;
+	  overflow-x: hidden;
+  }
+
+  .timeRanges::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+  .timeRange {
+	  font-size: 22px;
+  }
+
+  .meetingTitle {
+	  font-size: 26px;
+	  font-weight: 700;
+	  color: #01303f;
+	  /* margin-bottom: 10px; */
+  }
+

@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "d5cf5865-3d25-4606-ba26-fdddb8c36906",
+		"name": "SoftDev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Create or Fetch 1-1 Chats",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyYTk0NmJmZmU4OTE0MDgxZmU4YjA4In0sImlhdCI6MTY0NzA1NjM3OCwiZXhwIjoxNjQ3MDU5OTc4fQ.fx4NyxHDjGEiZnxdIrdIVX6Pfd0BWLpV02OFKUOwHHo",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"622a946bffe8914081fe8b08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/chat",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyYTk0NmJmZmU4OTE0MDgxZmU4YjA4In0sImlhdCI6MTY0Njk1NzY3NSwiZXhwIjoxNjQ2OTYxMjc1fQ.Z4b2gJFsJMCErkGIPHtS4TQIRwsGCG5sjwDHWejj8KE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyN2RlNzRmNjBjOTUwMTA4ZWEyOGEyIn0sImlhdCI6MTY0NzA2MDA2OSwiZXhwIjoxNjQ3MDYzNjY5fQ.hxGVIyaXOICwubBnYNVWUKK6higl6d9GcXLQn1-ssv8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/users?search=",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all Chats for a user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyODE3ZWU0YTFkZDAwNWY2NmM2Y2E0In0sImlhdCI6MTY0NzA2MTgwNiwiZXhwIjoxNjQ3MDY1NDA2fQ.GpTRrdxI1a0bPEXO3mD5m_LfXcg9-H8nRndehKl03IU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:5000/api/chat",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Group Chat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyN2RlNzRmNjBjOTUwMTA4ZWEyOGEyIn0sImlhdCI6MTY0NzA2MDA2OSwiZXhwIjoxNjQ3MDYzNjY5fQ.hxGVIyaXOICwubBnYNVWUKK6higl6d9GcXLQn1-ssv8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"users\": \"[\\\"622817ee4a1dd005f66c6ca4\\\",\\\"62280d3baa08e90fcaca0626\\\"]\",\n    \"name\": \"SoftDev Group 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/chat/group",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"chat",
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rename a Group",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyN2RlNzRmNjBjOTUwMTA4ZWEyOGEyIn0sImlhdCI6MTY0NzA2MDA2OSwiZXhwIjoxNjQ3MDYzNjY5fQ.hxGVIyaXOICwubBnYNVWUKK6higl6d9GcXLQn1-ssv8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chatId\": \"622c26d041804576adfef3bd\",\n    \"chatName\": \"Soft Dev 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/chat/rename",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"chat",
+								"rename"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User to Group",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyN2RlNzRmNjBjOTUwMTA4ZWEyOGEyIn0sImlhdCI6MTY0NzA2MDA2OSwiZXhwIjoxNjQ3MDYzNjY5fQ.hxGVIyaXOICwubBnYNVWUKK6higl6d9GcXLQn1-ssv8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chatId\": \"622c26d041804576adfef3bd\",\n    \"userId\": \"622a946bffe8914081fe8b08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/chat/groupadd",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"chat",
+								"groupadd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove User from Group",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyN2RlNzRmNjBjOTUwMTA4ZWEyOGEyIn0sImlhdCI6MTY0NzA2MDA2OSwiZXhwIjoxNjQ3MDYzNjY5fQ.hxGVIyaXOICwubBnYNVWUKK6higl6d9GcXLQn1-ssv8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"chatId\": \"622c26d041804576adfef3bd\",\n    \"userId\": \"622a946bffe8914081fe8b08\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/chat/groupremove",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"chat",
+								"groupremove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Authorized User Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWVmODFkMDZlZjVhZDhkOWIxMDQ1NDRiIn0sImlhdCI6MTU5MzMxODcwNywiZXhwIjoxNTkzMzIyMzA3fQ.XtnxI3bsvuUkwwHXTundYYvcLkII58Lrq6qmVp_4IVw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"User-Name\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,11 @@
+.timeContainer {
+    display: 'flex';
+    flex-wrap: 'wrap';
+}
+
+.timeField {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
